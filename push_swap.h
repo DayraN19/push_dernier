@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/03/02 10:58:32 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 12:46:37 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_ctrl
 	int				count_ra;
 	int				count_rb;
 	int				count_rr;
+	int				print_ops;
 	int				bench;
 	int				bench_tot;
 	int				executed_strategy;
@@ -110,6 +111,8 @@ int				roud(double x);
 void			sort_5complex(t_stack_node **a, t_stack_node **b, t_ctrl *n_op);
 void			handle_error(int argc, char **argv);
 int				get_max(t_stack_node *a);
-void			tot_bench(t_ctrl *c, int argc, char **argv);
+void			tot_bench(t_ctrl *c, char **argv);
 void			print_total(t_ctrl *c);
+void			free_ab(t_stack_node *a, t_stack_node *b);
+void			init_ab(t_stack_node **a, t_stack_node **b);
 #endif

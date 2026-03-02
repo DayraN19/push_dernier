@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handle_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpepin-l <lpepin-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 14:47:02 by bgranier          #+#    #+#             */
-/*   Updated: 2026/03/02 07:29:54 by lpepin-l         ###   ########.fr       */
+/*   Updated: 2026/03/02 12:43:18 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ static int	is_in_int_range(char *arg)
 
 void	handle_error(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	long	val;
 
 	i = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lpepin-l <lpepin-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:02:17 by bgranier          #+#    #+#             */
-/*   Updated: 2026/03/02 08:58:53 by lpepin-l         ###   ########.fr       */
+/*   Updated: 2026/03/02 12:42:50 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,3 @@ void	print_disorder_point(int disorder)
 	ft_putnbr_fd(fraction_part, 2);
 	ft_putstr_fd("%\n", 2);
 }
-

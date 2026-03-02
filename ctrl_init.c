@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ctrl_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bastiangranier <bastiangranier@student.    +#+  +:+       +#+        */
+/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:08:44 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/05 12:40:22 by bastiangran      ###   ########.fr       */
+/*   Updated: 2026/03/02 12:33:08 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ctrl_init(t_ctrl *c, t_stack_node *a, t_stack_node *b)
 	c->count_sa = 0;
 	c->count_sb = 0;
 	c->count_ss = 0;
+	c->bench_tot = 0;
 	c->executed_strategy = 0;
 	c->first = a;
 	c->last = b;

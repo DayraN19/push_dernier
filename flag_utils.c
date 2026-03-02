@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:53:21 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 12:54:33 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:13:16 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int	is_flag(char *arg)
 		|| !ft_strcmp(arg, "--simple")
 		|| !ft_strcmp(arg, "--medium")
 		|| !ft_strcmp(arg, "--complex")
-		|| !ft_strcmp(arg, "--adaptive"));
+		|| !ft_strcmp(arg, "--adaptive")
+		|| !ft_strcmp(arg, "--total"));
 }
 
 int	find_first_number(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:12:27 by bgranier          #+#    #+#             */
-/*   Updated: 2026/01/20 12:59:06 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:25:52 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	sa(t_stack_node **a, t_ctrl *c)
 	first->next = second->next;
 	second->next = first;
 	*a = second;
-	ft_printf("sa\n");
+	if (c->print_ops)
+		ft_printf("sa\n");
 	c->count_sa++;
 	c->count_op++;
 }
@@ -41,7 +42,8 @@ void	sb(t_stack_node **b, t_ctrl *c)
 	first->next = second->next;
 	second->next = first;
 	*b = second;
-	ft_printf("sb\n");
+	if (c->print_ops)
+		ft_printf("sb\n");
 	c->count_sb++;
 	c->count_op++;
 }
@@ -56,7 +58,8 @@ void	pa(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 	*b = (*b)->next;
 	tmp->next = *a;
 	*a = tmp;
-	ft_printf("pa\n");
+	if (c->print_ops)
+		ft_printf("pa\n");
 	c->count_pa++;
 	c->count_op++;
 }
@@ -71,7 +74,8 @@ void	pb(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 	*a = (*a)->next;
 	tmp->next = *b;
 	*b = tmp;
-	ft_printf("pb\n");
+	if (c->print_ops)
+		ft_printf("pb\n");
 	c->count_pb++;
 	c->count_op++;
 }
@@ -90,7 +94,8 @@ void	ra(t_stack_node **a, t_ctrl *c)
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = first;
-	ft_printf("ra\n");
+	if (c->print_ops)
+		ft_printf("ra\n");
 	c->count_ra++;
 	c->count_op++;
 }

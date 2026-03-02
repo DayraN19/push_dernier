@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 13:02:27 by bgranier          #+#    #+#             */
-/*   Updated: 2026/03/02 10:56:07 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 12:42:41 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	print_bench(t_ctrl *c)
 
 void	print_total(t_ctrl *c)
 {
-	ft_printf("[bench] total_ops: %d\n", c->count_op);
+	ft_printf("total_ops: %d\n", c->count_op);
 }
