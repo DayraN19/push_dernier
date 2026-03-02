@@ -6,7 +6,7 @@
 #    By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/05 13:00:48 by bgranier          #+#    #+#              #
-#    Updated: 2026/02/24 14:10:26 by bgranier         ###   ########.fr        #
+#    Updated: 2026/03/02 10:58:06 by bgranier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ CFLAGS = -Wall -Werror -Wextra -I . -I $(LIBFT_DIR) -I ft_printf
 
 SRC = push_swap.c \
 	init_stack.c \
+	handle_error.c \
 	disorder.c \
 	operate.c \
 	sort_simple.c \
@@ -33,14 +34,13 @@ SRC = push_swap.c \
 	sort_complex.c \
 	rotate.c \
 	third_utils.c \
-	index_stack.c \
 	new_node.c \
 	stack_utils.c \
 	new_stack.c \
-	sorted.c \
 	bench.c \
 	ctrl_init.c \
 	strategy.c \
+	total_bench.c \
 
 OBJ = $(SRC:.c=.o)
 

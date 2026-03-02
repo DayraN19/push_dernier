@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   seg_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpepin-l <lpepin-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:28:13 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/13 09:57:44 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 08:45:10 by lpepin-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,24 +62,6 @@ void	sort_chunks(t_stack_node **a, t_stack_node **b, int chunk, t_ctrl *c)
 			ra(a, c);
 	}
 }
-
-/* int	get_max_bits(t_stack_node *a)
-{
-	int	max;
-	int	bits;
-
-	max = 0;
-	while (a)
-	{
-		if (a->index > max)
-			max = a->index;
-		a = a->next;
-	}
-	bits = 0;
-	while ((max >> bits) != 0)
-		bits++;
-	return (bits);
-} */
 
 void	error_exit(void)
 {

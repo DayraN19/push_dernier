@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 13:17:22 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/24 14:39:35 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 10:27:21 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	sort_adaptive(t_stack_node **a, t_stack_node **b, t_ctrl *c)
 		sort_simple(a, b, c);
 	else if (c->executed_strategy == STRAT_MEDIUM)
 		sort_medium(a, b, c);
-	else if (c->executed_strategy == STRAT_COMPLEX)
+	else if (c->executed_strategy == STRAT_COMPLEX && size > 5)
 		sort_complex(a, b, c);
 	else if (c->executed_strategy == STRAT_COMPLEX && size <= 5)
 		sort_5complex(a, b, c);

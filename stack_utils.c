@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:21:31 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/13 14:10:23 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 10:55:02 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	free_stack(t_stack_node *stack)
 	}
 }
 
+/* void	free_all(stack) */
+//free les deux en meme temps
 void	print_stack(t_stack_node *stack)
 {
 	while (stack)

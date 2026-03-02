@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_medium.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lpepin-l <lpepin-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:54:28 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/24 13:54:04 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 08:43:57 by lpepin-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,23 +35,3 @@ void	sort_medium(t_stack_node **a, t_stack_node **b, t_ctrl *n_op)
 		pa(a, b, n_op);
 	}
 }
-
-/* void	sort_medium(t_stack_node **a, t_stack_node **b, t_ctrl *c)
-{
-	int	size;
-	int	chunk;
-
-	if (!a || !*a)
-		return ;
-	size = stack_size(*a);
-	if (size <= 5)
-	{
-		sort_simple(a, b, c);
-		return ;
-	}
-	chunk = get_chunk_size(size);
-	push_chunks(a, b, c, chunk);
-	push_back(a, b, c);
-	c->size_a = stack_size(*a);
-	c->size_b = stack_size(*b);
-} */

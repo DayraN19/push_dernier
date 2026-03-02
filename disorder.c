@@ -6,7 +6,7 @@
 /*   By: lpepin-l <lpepin-l@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 10:02:17 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/13 11:15:36 by lpepin-l         ###   ########.fr       */
+/*   Updated: 2026/03/02 08:58:53 by lpepin-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,3 @@ void	print_disorder_point(int disorder)
 	ft_putstr_fd("%\n", 2);
 }
 
-void	print_disorder_precise(int disorder)
-{
-	int	integer_part;
-	int	fraction_part;
-
-	integer_part = disorder / 100;
-	fraction_part = disorder % 100;
-	ft_putstr_fd("Initial disorder: ", 2);
-	ft_putnbr_fd(integer_part, 2);
-	ft_putstr_fd(".", 2);
-	if (fraction_part < 10)
-		ft_putstr_fd("0", 2);
-	ft_putnbr_fd(fraction_part, 2);
-	ft_putstr_fd("%\n", 2);
-}

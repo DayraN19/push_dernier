@@ -6,7 +6,7 @@
 /*   By: bgranier <bgranier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 15:10:08 by bgranier          #+#    #+#             */
-/*   Updated: 2026/02/24 13:29:19 by bgranier         ###   ########.fr       */
+/*   Updated: 2026/03/02 10:58:32 by bgranier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_ctrl
 	int				count_rb;
 	int				count_rr;
 	int				bench;
+	int				bench_tot;
 	int				executed_strategy;
 	t_strategy		strategy;
 	float			count_disorder;
@@ -64,8 +65,6 @@ void			free_stack(t_stack_node *stack);
 void			print_stack(t_stack_node *stack);
 t_stack_node	*get_stack_bottom(t_stack_node *stack);
 t_stack_node	*get_stack_before_bottom(t_stack_node *stack);
-const char		*strategy_name(int strat);
-const char		*strategy_complexity(int strat);
 void			sa(t_stack_node **a, t_ctrl *c);
 void			sb(t_stack_node **b, t_ctrl *c);
 void			pa(t_stack_node **a, t_stack_node **b, t_ctrl *c);
@@ -79,9 +78,7 @@ void			error_exit(void);
 void			sort_complex(t_stack_node **a, t_stack_node **b, t_ctrl *n_op);
 int				get_max_bits(t_stack_node **stack);
 void			move_min_to_top(t_stack_node **a, t_ctrl *c);
-void			sort_nearly_sorted(t_stack_node **a, t_stack_node **b);
 void			sort_simple(t_stack_node **a, t_stack_node **b, t_ctrl *c);
-void			sort_complex(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_adaptive(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 int				compute_disorder_precise(t_stack_node *a);
 void			dispatch_sort(t_stack_node **a, t_stack_node **b, t_ctrl *c);
@@ -90,14 +87,12 @@ void			ctrl_init(t_ctrl *c, t_stack_node *a, t_stack_node *b);
 void			print_bench(t_ctrl *c);
 void			select_strategy(t_ctrl *c, char **av);
 int				handle_bench(t_ctrl *c, int argc, char **argv);
-int				get_position(t_stack_node *stack, t_stack_node *node);
 int				get_chunk_size(int size);
 void			sort_5(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 void			sort_chunks(t_stack_node **a, t_stack_node **b,
 					int chunk, t_ctrl *c);
 void			push_chunks(t_stack_node **a, t_stack_node **b,
 					t_ctrl *c, int chunk);
-t_stack_node	*find_max(t_stack_node *b);
 void			push_back(t_stack_node **a, t_stack_node **b, t_ctrl *c);
 int				find_first_number(int argc, char **argv);
 int				is_flag(char *arg);
@@ -105,11 +100,6 @@ const char		*strategy_name(int strat);
 const char		*strategy_complexity(int strat);
 int				ft_sqrt(int n);
 int				ft_strcmp(char *s1, char *s2);
-void			sort_three(t_stack_node **a, t_ctrl *c);
-int				count_in_range(t_stack_node *a, int min, int max);
-int				get_max_index_pos(t_stack_node *b);
-void			push_back_to_a(t_stack_node **a, t_stack_node **b);
-int				print_disorder(t_stack_node *a);
 void			print_disorder_point(int disorder);
 void			bring_max_to_top_b(t_stack_node **b, t_ctrl *n_op);
 void			assign_index(t_stack_node *stack_a);
@@ -118,4 +108,8 @@ int				get_max_index_pos(t_stack_node *stack);
 void			p_to_b(t_stack_node **a, t_stack_node **b, int s, t_ctrl *n_op);
 int				roud(double x);
 void			sort_5complex(t_stack_node **a, t_stack_node **b, t_ctrl *n_op);
+void			handle_error(int argc, char **argv);
+int				get_max(t_stack_node *a);
+void			tot_bench(t_ctrl *c, int argc, char **argv);
+void			print_total(t_ctrl *c);
 #endif
